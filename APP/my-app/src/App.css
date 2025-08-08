@@ -1,0 +1,123 @@
+:root {
+  --bg-color: #f0f8ff; /* Soft light background */
+  --bot-color: rgba(255, 255, 255, 0.8);
+  --user-color: #becdce; /* Neon cyan */
+  --text-color: #0d0d0d;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e0f7ff, #ffe0f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.chat-container {
+  width: 60vw;
+  margin: 10vh;
+  height: 80vh;
+  background: var(--bot-color);
+ 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.chat-header {
+  padding: 15px;
+  background: linear-gradient(135deg, #00d8e6, #ff6eff);
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0 0 5px white;
+  box-shadow: 0 0 10px rgba(59, 59, 59, 0.3);
+  
+}
+
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 75%;
+  color: var(--text-color);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--user-color);
+  color: black;
+  font-weight: 500;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #ff6eff; /* Neon pink */
+  color: white;
+  font-weight: 500;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.chat-input button {
+  background: var(--user-color);
+  border: none;
+  padding: 10px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--user-color);
+}
+
+.chat-input button:hover {
+  background: #00d8e6;
+}
+
+/* Fade-in animation for messages */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    height: 100vh;
+    border-radius: 0;
+  }
+}

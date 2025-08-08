@@ -1,0 +1,112 @@
+.floating-icons {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.tech-icon {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  opacity: 0.6;
+  animation: float 35s linear infinite;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.1));
+  transition: opacity 0.3s ease;
+}
+.tech-icon:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+}
+
+/* Positions and images */
+.tech-icon.openai {
+  top: 10%; left: 10%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/OpenAI_Logo.svg');
+  background-size: 90%;
+  filter: invert(1);
+}
+
+.tech-icon.robot {
+  top: 25%; left: 25%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4712/4712042.png');
+}
+
+.tech-icon.gear {
+  top: 50%; left: 5%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/126/126486.png');
+}
+
+.tech-icon.brain {
+  top: 15%; left: 70%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4144/4144784.png');
+}
+
+.tech-icon.circuit {
+  top: 35%; left: 55%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1085/1085792.png');
+}
+
+.tech-icon.lightbulb {
+  top: 65%; left: 20%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/716/716784.png');
+}
+
+.tech-icon.neural {
+  top: 80%; left: 40%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3126/3126555.png');
+}
+
+.tech-icon.eye {
+  top: 55%; left: 80%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/565/565655.png');
+}
+
+.tech-icon.cloud {
+  top: 75%; left: 70%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4149/4149456.png');
+}
+
+.tech-icon.voice {
+  top: 40%; left: 85%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/727/727240.png');
+}
+
+.tech-icon.analytics {
+  top: 85%; left: 10%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828919.png');
+}
+
+.tech-icon.data {
+  top: 60%; left: 50%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2942/2942920.png');
+}
+
+.tech-icon.robot-arm {
+  top: 20%; left: 40%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/768/768945.png');
+}
+
+.tech-icon.mobile {
+  top: 50%; left: 60%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/561/561188.png');
+}
+
+.tech-icon.cloudsync {
+  top: 5%; left: 80%;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2913/2913466.png');
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+  }
+}
